@@ -1,0 +1,23 @@
+<html>
+<head><title> Log in</title>
+<link rel="stylesheet" type="text/css" href="class.css">
+</head>
+<body bgcolor="#4d0099" text="">
+<button onclick="window.location.href='index.html'" size="10px">Home</button> 
+<h1>Log in here:</h1><hr><br>
+
+<div class="a" style="width:50%; margin:auto;">
+		<form id="form">
+		<label>Email: </label>
+		<input id="email" style="margin:0 5px; " type="text" placeholder="Enter user email" size="66"/><br><br>
+		<label>Password: </label>&nbsp
+		<input id="pass" type="password" placeholder="Enter your password" size="65"/><br><br>
+		<input type="checkbox" onchange="document.getElementById('pass').type = this.checked ? 'text' : 'password'"> Show password<br><br>
+		<input type="button" id="btn" value="Log In"/>
+		
+		</form>
+		</div>
+</body>
+<script type="text/javascript" src="login.js"></script>
+</html>
+

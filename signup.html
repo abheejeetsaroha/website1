@@ -1,0 +1,34 @@
+<html>
+<head><title> Sign Up here</title>
+<link rel="stylesheet" type="text/css" href="class.css">
+</head>
+<body onload="users()" bgcolor="#4d0099">
+
+<button onclick="window.location.href='index.html'" size="10px">Home</button>
+<h1> REGISTER YOURSELF:</h1><hr><br>
+<div class="a" style=" margin:auto; width:50%;">
+		<form id="form">
+		<label>First name: </label>
+		<input id="fname" type="text" placeholder="Enter first name"/>
+		&nbsp &nbsp&nbsp &nbsp
+		<label>Last name: </label>
+		<input id="lname" type="text" placeholder="Enter last name" size="23"/> <br> <br>
+		<label>Address: </label><br>
+		<textarea id="add" type="textarea" placeholder="Enter your address here" rows="5" cols="75" > </textarea> <br> <br>
+		<label>Phone No.: </label>
+		<input id="phone" type="text" placeholder="Enter your phone number here" size="65"/> <br> <br>
+		
+		<label>Email: </label>&nbsp &nbsp &nbsp
+		<input id="email" type="text" placeholder="Enter user email" size="66"/><br><br>
+		<label>Password: </label>&nbsp
+		<input id="pass" type="password" placeholder="choose your pass" size="65"/><br><br>
+		<input type="checkbox" onchange="document.getElementById('pass').type = this.checked ? 'text' : 'password'"> Show password<br><br>
+		<input type="button" id="btn" value="submit"/>
+		
+		</form>
+</div>
+
+</body>
+<script type="text/javascript" src="signup.js"></script>
+</html>
+

@@ -1,0 +1,19 @@
+<html>
+<body BGCOLOR="green">
+<div style="float:left; font-size:120%;color:white;"><b>Dashboard</b></div>
+<a id="usr" href="index.html" style="float:right;color:white;" target="_top"></a>
+</body>
+<script>
+	var btn=document.getElementById("usr");
+	window.onload=function(){
+	
+var obj = JSON.parse(sessionStorage.getItem("user"));
+
+	btn.innerHTML="Hi! "+ obj;
+	}
+btn.addEventListener("click",function(){
+sessionStorage.removeItem("user");
+	
+});
+</script>
+</html>
