@@ -1,0 +1,40 @@
+    // *used for installing docker*
+    1  yum install docker -y
+    // *used for installing apache*
+    2  yum install httpd -y
+    // *used for starting docker*
+    3  service docker start
+    // *accessing sub folder of httpd *
+    4  cd /var
+    5  cd www
+    // *Installing git for cloning my repository*
+    6  yum install git
+    // *removing html file* 
+    7  rm -r html
+    //*cloning my repository*
+    8  git clone https://github.com/abheejeetsaroha/website1.git
+    9  mv dashboard.html index.html
+   10  ls
+   11  mv website1 html
+   12  cd html
+   13  mv dashboard.html index.html
+   14  cd html
+   15  cd
+   16  service httpd stop
+   // *dockerfile contain
+   {
+   FROM centos 
+   RUN yum install httpd -y
+   CMD ["/usr/sbin/apachectl
+   }*
+   17  vim dockerfile
+   // *building image by the name myapache and with tag t1*
+   18  docker build -t myapache:t1 .
+   // *intializing of docker swarm on mager machine*
+   19  docker swarm init --advertise-addr 13.127.117.164
+   20  docker node ls
+   // *container is launched by using this command *
+   21  docker service create --name myweb --mount type=bind,source=/var/www/html,target=/var/www/html  --publish published=80,target=80 --replicas 2 myapache:t1
+   22  docker service ls
+   23  curl localhost:80
+   // *after this high availibility website is hosted*
